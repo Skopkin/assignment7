@@ -1,7 +1,7 @@
 pipeline {
-	environment {
-		JAVA_TOOL_OPTOPNS: "-Duser.home=/var/maven"
-	}
+    environment {
+        JAVA_TOOL_OPTIONS = "-Duser.home=/var/maven"
+    }
     agent {
     	docker {
     		image "maven:3.8.4-jdk-13"
