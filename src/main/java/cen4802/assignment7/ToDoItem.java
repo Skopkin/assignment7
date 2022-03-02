@@ -12,7 +12,25 @@ import jakarta.persistence.Id;
 @Entity(name="ToDoList")
 public class ToDoItem {
 	@Id
+	int id;
+
 	String task;
+	
+	/**
+	 * Getter method for the id
+	 * @return id #
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * Setter method for the id
+	 * @param id #
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	/**
 	 * Getter method for the task
