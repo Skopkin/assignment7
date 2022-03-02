@@ -6,7 +6,7 @@ pipeline {
     	docker {
     		image "maven:3.8.4-jdk-13"
     		label "docker"
-    		args "-v /tmp/maven:/var/maven/.m2 -e MAVEN_CONFIG=/var/maven/.m2
+    		args "-v /tmp/maven:/var/maven/.m2 -e MAVEN_CONFIG=/var/maven/.m2"
     	}
     }
 
