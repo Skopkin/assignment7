@@ -22,30 +22,30 @@ public class AppTest
     }
     
     @Before
-	static void setUpBeforeClass() throws Exception {
+	public void setUpBeforeClass() throws Exception {
 	}
 
 	@After
-	static void tearDownAfterClass() throws Exception {
+	public void tearDownAfterClass() throws Exception {
 	}
 
 	@Before
-	void setUp() throws Exception {
+	public void setUp() throws Exception {
 	}
 
 	@After
-	void tearDown() throws Exception {
+	public void tearDown() throws Exception {
 	}
 	
 	@Test
-	void testGetTask() {
+	public void testGetTask() {
 		String testString = "Test getter method";
 		ToDoItem item = new ToDoItem(testString);
 		assertEquals(testString, item.getTask());
 	}
 	
 	@Test
-	void testSetTask() {
+	public void testSetTask() {
 		String testString = "Test setter method";
 		ToDoItem item = new ToDoItem();
 		item.setTask(testString);
