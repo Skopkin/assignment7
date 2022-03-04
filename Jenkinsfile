@@ -16,6 +16,7 @@ pipeline {
             steps {
                 bat "mvn -version"
                 bat "mvn clean install"
+                docker build -t todo-mjd.jar
             }
         }
     }
