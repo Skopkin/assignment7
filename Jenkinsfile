@@ -9,6 +9,10 @@ pipeline {
 
     stages {
         stage("Build") {
+        	environment {
+        	    HOME="."
+        	}
+
             steps {
                 bat "mvn -version"
                 bat "mvn clean install"
