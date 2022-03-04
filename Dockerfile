@@ -1,4 +1,4 @@
-FROM maven:3.8.4-jdk-13
+FROM maven:3.8.4-jdk-11
 USER root
 RUN apt-get update && apt-get install -y lsb-release
 RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
