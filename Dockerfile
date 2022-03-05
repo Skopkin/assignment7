@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD target/my-maven-docker-project.jar my-maven-docker-project.jar
+ADD target/todo-mjd.jar todo-mjd.jar
 ENTRYPOINT ["java", "-jar","todo-mjd.jar"]
 EXPOSE 8080
