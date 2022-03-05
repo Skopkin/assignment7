@@ -9,8 +9,6 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>assignment7</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -70,7 +68,7 @@
 			      <manifest>
 			            <addClasspath>true</addClasspath>
 			            <classpathPrefix>lib/</classpathPrefix>
-			            <mainClass>com.mycompany.app.App</mainClass>
+			            <mainClass>cen4802.assignment7.Assignment7</mainClass>
 			      </manifest>
 			 	</archive>
 			 </configuration>
