@@ -70,9 +70,17 @@ public class HibernateDb {
 		
 		try {
 			tx = session.beginTransaction();
-			ToDoItem item = (ToDoItem)session.get(ToDoItem.class, s);
-			session.delete(item);
-			tx.commit();
+			@SuppressWarnings({ "rawtypes" })
+			List results = session.createQuery("FROM ToDoList").list();
+			ArrayList<ToDoItem> list = new ArrayList<ToDoItem>();
+			ToDoItem item = null;
+			for (Iterator<?> iterator = results.iterator(); iterator.hasNext();) {
+				item = (ToDoItem)iterator.next();
+				if (s.equals(item.getTask())) {
+					session.delete(item);
+					tx.commit();
+				}
+			}
 			success = true;
 		} catch (Exception e) {
 			if (tx!=null) {

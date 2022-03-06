@@ -1,7 +1,10 @@
 package cen4802.assignment7;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.Before;
@@ -51,4 +54,31 @@ public class AppTest
 		item.setTask(testString);
 		assertEquals(testString, item.getTask());
 	}
+	
+	@Test
+	public void testAddRemoveItem() {
+		String testString = "Test db entry";
+		ToDoItem item = new ToDoItem(testString);
+		HibernateDb db = new HibernateDb();
+		db.addItem(item);
+		ArrayList<ToDoItem> list = db.updateList();
+		assertEquals(testString, list.get(list.size() - 1).task);
+		db.removeItem(testString);
+		list = db.updateList();
+		for (ToDoItem i: list) {
+			assertNotEquals(testString, i.getTask());
+		}
+		
+	}
+	
+//	@Test
+//	public void testRemoveItem() {
+//		String testString = "Test db entry";
+//		HibernateDb db = new HibernateDb();
+//		db.removeItem(testString);
+//		ArrayList<ToDoItem> list = db.updateList();
+//		for (ToDoItem i: list) {
+//			assertNotEquals(testString, i.getTask());
+//		}
+//	}
 }
