@@ -72,7 +72,6 @@ public class HibernateDb {
 			tx = session.beginTransaction();
 			@SuppressWarnings({ "rawtypes" })
 			List results = session.createQuery("FROM ToDoList").list();
-			ArrayList<ToDoItem> list = new ArrayList<ToDoItem>();
 			ToDoItem item = null;
 			for (Iterator<?> iterator = results.iterator(); iterator.hasNext();) {
 				item = (ToDoItem)iterator.next();
