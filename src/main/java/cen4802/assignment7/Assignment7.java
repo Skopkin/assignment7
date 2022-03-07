@@ -20,7 +20,7 @@ public class Assignment7 {
 		final String menuText = "1. Add a to-do item\n"
 				+ "2. Delete a to-do item\n"
 				+ "3. View all to-do items\n"
-				+ "4. Exit application";
+				+ "4. Exit application!";
 		
 		int menuOption = 0;
 		String textInput;
